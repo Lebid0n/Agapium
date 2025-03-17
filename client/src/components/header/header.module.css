@@ -1,0 +1,141 @@
+.nunito {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--headerBackground);
+
+  width: 100vw;
+  height: 10vh;
+}
+
+/* Icon panel */
+
+.IconPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+
+  width: 20%;
+  height: 100%;
+}
+
+.IconPanel > a {
+  color: var(--textColor);
+}
+
+.IconPanel > a > svg {
+  max-width: 36px;
+  width: 4vw;
+  max-height: 36px;
+  height: 4vw;
+}
+
+.text {
+  color: var(--textColor);
+  font-size: 2vw;
+}
+
+/* Search Panel */
+
+.searchPanel {
+  display: flex;
+  align-items: center;
+
+  width: 70%;
+  height: 100%;
+}
+
+.searchPanel > input {
+  border: none;
+  border-radius: 1vw 0 0 1vw;
+
+  padding: var(--padding);
+
+  background-color: var(--divBackground);
+  color: var(--textColor);
+
+  width: 40%;
+  height: 40%;
+
+  transition: 0.5s;
+}
+
+.searchPanel > input::placeholder {
+  color: var(--textColor);
+}
+
+.searchPanel > input:hover {
+  height: 45%;
+
+  transition: 0.5s;
+}
+
+.searchPanel > input:focus {
+  outline: none;
+
+  height: 45%;
+
+  transition: 0.5s;
+}
+
+.searchPanel > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+
+  background-color: var(--divBackground);
+
+  width: 2vw;
+  height: 40%;
+
+  transition: 0.5s;
+}
+
+.searchPanel > button:hover {
+  height: 45%;
+
+  transition: 0.5s;
+}
+
+.searchPanel > button > svg {
+  color: var(--textColor);
+
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.searchButton {
+  border-radius: 0 1vw 1vw 0;
+}
+
+/* User account panel */
+
+.userAccountPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 10%;
+  height: 100%;
+}
+
+.userAccountPanel > a > svg {
+  border-radius: 50%;
+
+  color: var(--textColor);
+  background-color: var(--divBackground);
+
+  width: 3vw;
+  height: 3vw;
+}

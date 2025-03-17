@@ -1,0 +1,98 @@
+.loginPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+  border-radius: 8px;
+  background-color: var(--divBackground);
+  padding: 16px;
+
+  width: fit-content;
+}
+
+.formData {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPanel input {
+  border: none;
+  border-radius: var(--borderRadius);
+  padding: var(--padding);
+
+  transition: 0.5s;
+}
+
+.loginPanel input:hover {
+  background-color: rgb(210, 210, 210);
+
+  transition: 0.5s;
+}
+
+.loginPanel input:focus {
+  outline: 2px solid var(--primaryColor);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.buttons > button,
+.buttons > button > a {
+  border: none;
+  border-radius: var(--borderRadius);
+  padding: var(--padding);
+  color: var(--textColor);
+  transition: 0.5s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.saveButton {
+  background-color: #3e3e74;
+}
+
+.saveButton:hover {
+  background-color: rgb(39, 39, 74);
+}
+
+.registrationButton {
+  background-color: rgb(62, 139, 62);
+}
+
+.registrationButton:hover {
+  background-color: rgb(44, 96, 44);
+}
+
+.error {
+  border-radius: var(--borderRadius);
+  padding: var(--padding);
+  background-color: var(--closeButnsColor);
+}
+
+.error > p {
+  color: var(--errorTextColor);
+}
+
+.success {
+  border-radius: var(--borderRadius);
+  padding: var(--padding);
+  background-color: var(--successMessageColor);
+}
+
+.success > p {
+  color: var(--successTextColor);
+}

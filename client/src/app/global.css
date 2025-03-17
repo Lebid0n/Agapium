@@ -1,0 +1,23 @@
+* {
+  margin: 0%;
+  padding: 0%;
+
+  box-sizing: border-box;
+}
+
+:root {
+  --headerBackground: #0d1b2a;
+  --background: #303e57;
+  --divBackground: #415a77;
+  --contentBackground: #778da9;
+  --closeButnsColor: #ffcccc;
+  --errorTextColor: rgb(198, 38, 38);
+  --successMessageColor: rgb(57, 124, 57);
+  --successTextColor: rgb(5, 62, 0);
+  --primaryColor: #007bff;
+  --textColor: #e0e1dd;
+  --postTextColor: rgb(40, 37, 37);
+  --gap: 0.5vw;
+  --borderRadius: 1vw;
+  --padding: 0.5vw;
+}
