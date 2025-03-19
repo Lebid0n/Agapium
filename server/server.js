@@ -39,8 +39,6 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage: storage });
-
 app.post("/register", async (req, res) => {
   const { userName, userEmail, userPassword } = req.body;
 
@@ -114,58 +112,6 @@ app.post("/login", async (req, res) => {
     res
       .status(500)
       .json({ error: "Ошибка при авторизации пользователя: " + err.message });
-  }
-});
-
-app.post("/profile/avatar", upload.single("avatar"), async (req, res) => {
-  try {
-    const token = req.headers.authorization?.split(" ")[1];
-    if (!token) {
-      return res.status(401).json({ error: "Токен не предоставлен" });
-    }
-
-    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-    const userId = decodedToken.userId;
-
-    if (!req.file) {
-      return res.status(400).json({ error: "Файл не был загружен" });
-    }
-
-    const avatarUrl = `/uploads/${req.file.filename}`;
-
-    await db.query("UPDATE users SET avatar = ? WHERE id = ?", [
-      avatarUrl,
-      userId,
-    ]);
-
-    res
-      .status(200)
-      .json({ message: "Аватар успешно загружен", avatarUrl: avatarUrl });
-  } catch (err) {
-    console.error("Ошибка при загрузке аватара: ", err);
-    res
-      .status(500)
-      .json({ error: "Ошибка при загрузке аватара: " + err.message });
-  }
-});
-
-app.get("/api/user/avatar/:userId", async (req, res) => {
-  const userId = req.params.userId;
-
-  try {
-    const [result] = await db.query("SELECT avatar FROM users WHERE id = ?", [
-      userId,
-    ]);
-
-    if (result.length === 0) {
-      return res.status(404).json({ error: "User not found" });
-    }
-
-    const avatarUrl = result[0].avatar;
-    res.status(200).json({ avatarUrl: avatarUrl });
-  } catch (err) {
-    console.error("Error fetching avatar:", err);
-    res.status(500).json({ error: "Error fetching avatar: " + err.message });
   }
 });
 
