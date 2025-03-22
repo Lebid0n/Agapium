@@ -1,6 +1,6 @@
-import Header from "../../components/header/header";
-import Nav from "../../components/navPanel/nav";
-import News from "../../components/news/news";
+import Header from "../../components/layout/header/header";
+import Nav from "../../components/layout/navPanel/nav";
+import News from "../../components/layout/news/news";
 //styles
 import styles from "./home.module.css";
 

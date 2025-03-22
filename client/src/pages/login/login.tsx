@@ -1,4 +1,4 @@
-import LoginPanel from "../../components/loginPanel/loginPanel";
+import LoginPanel from "../../components/auth/loginPanel/loginPanel";
 import styles from "./login.module.css";
 
 export default function LoginPage() {

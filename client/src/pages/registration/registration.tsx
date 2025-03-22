@@ -1,4 +1,4 @@
-import RegistrationPanel from "../../components/registrationPanel/registrationPanel";
+import RegistrationPanel from "../../components/auth/registrationPanel/registrationPanel";
 
 import styles from "./registration.module.css";
 
